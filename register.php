@@ -36,29 +36,29 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Buat akun baru!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" action="aksireg.php" method="post">
                                 <div class="form-group">
-                                    <input type="number" class="form-control form-control-user" id="exampleInputNIM"
+                                    <input type="number" class="form-control form-control-user" id="exampleInputNIM" name="nim"
                                         placeholder="NIM / NIDN">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputNama"
+                                    <input type="text" class="form-control form-control-user" id="exampleInputNama" name="nama"
                                         placeholder="Nama">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" name="email"
                                         placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputJurusan"
+                                    <input type="text" class="form-control form-control-user" id="exampleInputJurusan" name="jurusan"
                                         placeholder="Jurusan">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputKelas"
+                                    <input type="text" class="form-control form-control-user" id="exampleInputKelas" name="kelas"
                                         placeholder="Kelas">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password"
                                         placeholder="Password">
                                 </div>
                                 <fieldset class="form-group">
@@ -80,7 +80,7 @@
                                     </div>   
                                     </div>
                                 </fieldset>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <a class="btn btn-primary btn-user btn-block" name="submit-usr">
                                     Register Akun
                                 </a>
                                 <hr>
@@ -96,7 +96,7 @@
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

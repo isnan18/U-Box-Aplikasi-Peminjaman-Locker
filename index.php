@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +77,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Buat akun baru!</a>
+                                        <a class="small" href="register.php">Buat akun baru!</a>
                                     </div>
                                 </div>
                             </div>
