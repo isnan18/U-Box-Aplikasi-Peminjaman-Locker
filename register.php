@@ -38,7 +38,7 @@
                             </div>
                             <form class="user" action="aksireg.php" method="post">
                                 <div class="form-group">
-                                    <input type="number" class="form-control form-control-user" id="exampleInputNIM" name="nim"
+                                    <input type="number" class="form-control form-control-user" id="exampleInputNIM" name="nim_nidn"
                                         placeholder="NIM / NIDN">
                                 </div>
                                 <div class="form-group">
@@ -72,7 +72,7 @@
                                         </label>
                                         </div>
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="status" id="status" value="3">
+                                        <input class="form-check-input" type="radio" name="status" id="status" value="2">
                                         <label class="form-check-label" for="status">
                                             Dosen
                                         </label>
@@ -80,9 +80,7 @@
                                     </div>   
                                     </div>
                                 </fieldset>
-                                <a class="btn btn-primary btn-user btn-block" name="submit-usr">
-                                    Register Akun
-                                </a>
+                                <button class="btn btn-primary btn-user btn-block" name="submit-usr"> Register Akun</button>
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google

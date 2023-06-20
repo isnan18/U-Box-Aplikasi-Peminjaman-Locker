@@ -1,7 +1,7 @@
 <?php
 $conn = mysqli_connect("localhost","root","","webti");
 if (isset($_POST['submit-usr'])){
-$nim = $_POST['nim'];
+$nim = $_POST['nim_nidn'];
 $nama = $_POST['nama'];
 $email = $_POST['email'];
 $jurusan = $_POST['jurusan'];
@@ -10,7 +10,7 @@ $password = $_POST['password'];
 $status = $_POST['status'];
 
 $query = "INSERT INTO user VALUES ('','$nim','$nama','$email','$jurusan','$kelas','$password','$status')";
-$message = (mysqli_query($conn,$query)) ? "anda berhasil register" : "anda gagal register".mysqli_error($conn);
+$message = (mysqli_query($conn,$query)) ? "Anda berhasil register" : "anda gagal register".mysqli_error($conn);
 }
 ?>
 <!DOCTYPE html>

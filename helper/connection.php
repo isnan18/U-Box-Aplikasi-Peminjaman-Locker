@@ -2,6 +2,7 @@
 $dbhost = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "p-db";
+$dbname = "webti";
 
 $connection = mysqli_connect($dbhost, $dbusername, $dbpassword,  $dbname);
+?>

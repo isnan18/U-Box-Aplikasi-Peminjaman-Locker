@@ -11,27 +11,25 @@
     </div>
     <ul class="sidebar-menu">
       <li class="menu-header">Dashboard</li>
-      <li><a class="nav-link" href="../"><i class="fas fa-fire"></i> <span>Home</span></a></li>
+      <li><a class="nav-link" href="../admin/index.php"><i class="fas fa-fire"></i> <span>Home</span></a></li>
       <li class="menu-header">Main Feature</li>
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-chalkboard-user"></i> <span>Dosen</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-chalkboard-user"></i> <span>Jumlah User</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../dosen/index.php">List</a></li>
-          <li><a class="nav-link" href="../dosen/create.php">Tambah Data</a></li>
+          <li><a class="nav-link" href="../admin/index2.php">List</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-calendar-days"></i> <span>Mata Kuliah</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-person"></i><span>Jumlah Penitip</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../matakuliah/index.php">List</a></li>
-          <li><a class="nav-link" href="../matakuliah/create.php">Tambah Data</a></li>
+          <li><a class="nav-link" href="../admin/indexpenitip.php">List</a></li>
+          <li><a class="nav-link" href="../admin/createpenitip.php">Tambah Penitip</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-user"></i><span>User</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-lock"></i> <span>Loker</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../user/index.php">List</a></li>
-          <li><a class="nav-link" href="../user/create.php">Tambah Data</a></li>
+          <li><a class="nav-link" href="../admin/indexloker.php">List</a></li>
         </ul>
       </li>      
     </ul>
