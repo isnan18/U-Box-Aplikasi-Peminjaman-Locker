@@ -20,10 +20,11 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-regular fa-object-group"></i> <span>Barang Anda</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-regular fa-object-group"></i> <span>Peminjaman Loker</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../user/indexbarang.php">List</a></li>
-          <li><a class="nav-link" href="../user/createbarang.php">Tambah Penitipan</a></li>
+          <li><a class="nav-link" href="../user/indexbarang.php">Kembalikan Kunci</a></li>
+          <li><a class="nav-link" href="../user/createbarang.php">Konfirmasi Data</a></li>
+          <li><a class="nav-link" href="../user/pinjamlagi.php">Pinjam Kunci Loker</a></li>
         </ul>
       </li>
       <li class="dropdown">

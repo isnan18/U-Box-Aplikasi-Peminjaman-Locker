@@ -2,16 +2,18 @@
 session_start();
 require_once '../helper/connection.php';
 
-$id = $_POST['id'];
-$nim = $_POST['nim_nidn'];
-$nama = $_POST['nama'];
-$email = $_POST['email'];
-$jurusan = $_POST['jurusan'];
-$kelas = $_POST['kelas'];
-$password = $_POST['password'];
-$status = $_POST['status'];
+if (isset($_POST['proses'])) {
+  
+  $nim_nidn = $_POST['nim_nidn'];
+  $nama = $_POST['nama'];
+  $email = $_POST['email'];
+  $jurusan = $_POST['jurusan'];
+  $kelas = $_POST['kelas'];
+  $password = $_POST['password'];
+  $nohp = $_POST['nohp'];
 
-$query = mysqli_query($connection, "UPDATE user SET nim_nidn = '$nim', nama = '$nama', email = '$email', jurusan = '$jurusan', kelas = '$kelas', password = '$password', status = '$status'  WHERE id = '$id'");
+  $query = mysqli_query($connection, "UPDATE user SET nama = '$nama', email = '$email', jurusan = '$jurusan', kelas = '$kelas', password = '$password', nohp = '$nohp'  WHERE nim_nidn = '$nim_nidn'");
+}
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',
@@ -25,3 +27,4 @@ if ($query) {
   ];
   header('Location: ./indexprofile.php');
 }
+?>

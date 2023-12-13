@@ -5,7 +5,7 @@ require_once '../helper/connection.php';
 
 $user = mysqli_query($connection, "SELECT COUNT(*) FROM user");
 $penitip = mysqli_query($connection, "SELECT COUNT(*) FROM penitip");
-$loker = mysqli_query($connection, "SELECT COUNT(*) FROM loker");
+$loker = mysqli_query($connection, "SELECT COUNT(*) FROM locker");
 
 
 $total_user = mysqli_fetch_array($user)[0];
@@ -44,7 +44,7 @@ $total_loker = mysqli_fetch_array($loker)[0];
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Total Penitip</h4>
+              <h4>Total Peminjam</h4>
             </div>
             <div class="card-body">
               <?= $total_penitip ?>

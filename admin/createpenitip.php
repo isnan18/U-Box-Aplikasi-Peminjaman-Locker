@@ -5,7 +5,7 @@ require_once '../helper/connection.php';
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>Tambah Penitip</h1>
+    <h1>Tambah Peminjam</h1>
     <a href="./index2.php" class="btn btn-light">Kembali</a>
   </div>
   <div class="row">

@@ -4,7 +4,6 @@ if (!isset($_SESSION['email'])){
     $msg = "anda tidak berhak akses";
 }else if ($_SESSION['status']!=2){
     $msg = "anda tidak berhak akses";
-    echo $msg;
 }
 
 $email = $_SESSION['email'];
@@ -13,14 +12,14 @@ $query = "SELECT * FROM user WHERE email= '$email' ";
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
-    $id = $row['id'];
+    $nim_nidn = $row['nim_nidn'];
     $nama = $row['nama'];
     $email = $row['email'];
-    $nim = $row['nim_nidn'];
     $jurusan = $row['jurusan'];
     $kelas = $row['kelas'];
     $password = $row['password'];
-    $status = $row['status'];
+    $nohp = $row['nohp'];
+    $id_admin = $row['id_admin'];
 } else {
     // Pengguna tidak ditemukan, lakukan penanganan sesuai kebutuhan
 }

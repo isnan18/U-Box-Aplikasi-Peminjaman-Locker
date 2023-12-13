@@ -23,20 +23,19 @@ $result = mysqli_query($connection, "SELECT * FROM user WHERE  email= '$email' "
                   <th>Email</th>
                   <th>Jurusan</th>
                   <th>Kelas</th>
-                  <th>Password</th>
                   <th>Edit</th>
                 </tr>
               </thead>
               <tbody>
                   <tr>
-                    <td><?= $nim ?></td>
+                    <td><?= $nim_nidn ?></td>
                     <td><?= $nama ?></td>
                     <td><?= $email ?></td>
                     <td><?= $jurusan ?></td>
                     <td><?= $kelas ?></td>
-                    <td><?= $password ?></td>
+                    <td hidden><?= $password ?></td>
                     <td>
-                    <a class="btn btn-sm btn-info" href="editprofile.php?id=<?= $nim ?>">
+                    <a class="btn btn-sm btn-info" href="editprofile.php?id=<?= $nim_nidn ?>">
                         <i class="fas fa-edit fa-fw"></i>
                       </a>
                     </td>

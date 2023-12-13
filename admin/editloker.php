@@ -3,7 +3,7 @@ require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
 $id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT * FROM loker WHERE no='$id'");
+$query = mysqli_query($connection, "SELECT * FROM locker WHERE no='$id'");
 ?>
 
 <section class="section">

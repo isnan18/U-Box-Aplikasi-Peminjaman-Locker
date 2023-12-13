@@ -20,10 +20,10 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-person"></i><span>Jumlah Penitip</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-person"></i><span>Jumlah Peminjam</span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="../admin/indexpenitip.php">List</a></li>
-          <li><a class="nav-link" href="../admin/createpenitip.php">Tambah Penitip</a></li>
+          <li><a class="nav-link" href="../admin/indexpenitip.php">Jumlah Peminjam Aktif</a></li>
+          <li><a class="nav-link" href="../admin/indexpenitip2.php">Jumlah Peminjam Total</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -31,7 +31,13 @@
         <ul class="dropdown-menu">
           <li><a class="nav-link" href="../admin/indexloker.php">List</a></li>
         </ul>
-      </li>      
+      </li>
+      <li class="dropdown">
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fa-solid fa-circle-info"></i><span>Riwayat Peminjaman</span></a>
+        <ul class="dropdown-menu">
+          <li><a class="nav-link" href="../admin/indexlaporan.php">List</a></li>
+        </ul>
+      </li>       
     </ul>
   </aside>
 </div>

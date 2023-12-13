@@ -2,7 +2,7 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM user WHERE nama!= 'admin' ");
+$result = mysqli_query($connection, "SELECT * FROM user ");
 ?>
 
 <section class="section">
@@ -17,14 +17,12 @@ $result = mysqli_query($connection, "SELECT * FROM user WHERE nama!= 'admin' ");
             <table class="table table-hover table-striped w-100" id="table-1">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>NIM/NIDN</th>
                   <th>Nama</th>
                   <th>Email</th>
                   <th>Jurusan</th>
                   <th>Kelas</th>
-                  <th>Password</th>
-                  <th style="width: 150">Aksi</th>
+                  <th>No HP</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,18 +31,12 @@ $result = mysqli_query($connection, "SELECT * FROM user WHERE nama!= 'admin' ");
                 ?>
 
                   <tr>
-                    <td><?= $data['id'] ?></td>
                     <td><?= $data['nim_nidn'] ?></td>
                     <td><?= $data['nama'] ?></td>
                     <td><?= $data['email'] ?></td>
                     <td><?= $data['jurusan'] ?></td>
                     <td><?= $data['kelas'] ?></td>
-                    <td><?= $data['password'] ?></td>
-                    <td>
-                      <a class="btn btn-sm btn-danger mb-md-0 mb-1" href="deleteuser.php?id=<?= $data['id'] ?>">
-                        <i class="fas fa-trash fa-fw"></i>
-                      </a>
-                    </td>
+                    <td><?= $data['nohp'] ?></td>
                   </tr>
 
                 <?php

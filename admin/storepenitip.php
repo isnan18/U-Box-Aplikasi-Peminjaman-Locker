@@ -3,12 +3,11 @@ session_start();
 require_once '../helper/connection.php';
 
 $nama = $_POST['nama'];
-$barang = $_POST['barang'];
-$jumlah = $_POST['jumlah'];
-$status = $_POST['status'];
-$loker = $_POST['loker'];
+$jurusan = $_POST['jurusan'];
+$nohp = $_POST['nohp'];
+$nim = $_POST['nim_nidn'];
 
-$query = mysqli_query($connection, "insert into penitip(id, nama, barang, jumlah, status, loker) value('','$nama', '$barang','$jumlah', '$status', $loker)");
+$query = mysqli_query($connection, "insert into penitip(id, nama, jurusan, nohp, nim_nidn) value('','$nama', '$jurusan','$nohp', '$nim')");
 if ($query) {
   $_SESSION['info'] = [
     'status' => 'success',

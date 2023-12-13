@@ -2,13 +2,12 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM penitip");
+$result = mysqli_query($connection, "SELECT * FROM penitip WHERE no > '0'");
 ?>
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>Aprove Penitip</h1>
-    <a href="./createpenitip.php" class="btn btn-primary">Tambah Data</a>
+    <h1>Jumlah Peminjam Aktif</h1>
   </div>
   <div class="row">
     <div class="col-12">
@@ -19,12 +18,11 @@ $result = mysqli_query($connection, "SELECT * FROM penitip");
               <thead>
                 <tr>
                   <th>ID</th>
+                  <th>NIM</th>
                   <th>Nama</th>
-                  <th>Barang</th>
-                  <th>Jumlah</th>
-                  <th>Status</th>
-                  <th>Loker</th>
-                  <th style="width: 150">Aksi</th>
+                  <th>Jurusan</th>
+                  <th>No HP</th>
+                  <th>No Loker</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,20 +31,12 @@ $result = mysqli_query($connection, "SELECT * FROM penitip");
                 ?>
 
                   <tr>
-                    <td><?= $data['id'] ?></td>
+                    <td><?= $data['id_peminjam'] ?></td>
+                    <td><?= $data['nim_nidn'] ?></td>
                     <td><?= $data['nama'] ?></td>
-                    <td><?= $data['barang'] ?></td>
-                    <td><?= $data['jumlah'] ?></td>
-                    <td><?= $data['status'] ?></td>
-                    <td><?= $data['loker'] ?></td>
-                    <td>
-                      <a class="btn btn-sm btn-danger mb-md-0 mb-1" href="deletepenitip.php?id=<?= $data['id'] ?>">
-                        <i class="fas fa-trash fa-fw"></i>
-                      </a>
-                      <a class="btn btn-sm btn-info" href="editpenitip.php?id=<?= $data['id'] ?>">
-                        <i class="fas fa-edit fa-fw"></i>
-                      </a>
-                    </td>
+                    <td><?= $data['jurusan'] ?></td>
+                    <td><?= $data['nohp'] ?></td>
+                    <td><?= $data['no'] ?></td>
                   </tr>
 
                 <?php

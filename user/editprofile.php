@@ -15,16 +15,11 @@ require_once '../helper/connection.php';
         <div class="card-body">
           <!-- // Form -->
           <form action="./updateprofile.php" method="post">
-           
-              <input type="hidden" name="id" value="<?= $row['id'] ?>">
+              <input type="hidden" name="nim_nidn" value="<?= $row['nim_nidn'] ?>">
               <table cellpadding="8" class="w-100">
-              <tr>
-                  <td></td>
-                  <td><input class="form-control" type="number" name="id" size="20" required value="<?= $id ?>" hidden></td>
-                </tr>
                 <tr>
                   <td>NIM/NIDN</td>
-                  <td><input class="form-control" type="number" name="nim_nidn" size="20" required value="<?= $nim ?>" readonly></td>
+                  <td><input class="form-control" type="number" name="nim_nidn" size="20" required value="<?= $nim_nidn ?>" readonly></td>
                 </tr>
                 <tr>
                   <td>Nama</td>
@@ -43,12 +38,12 @@ require_once '../helper/connection.php';
                   <td><input class="form-control" type="text" name="kelas" size="20" required value="<?= $kelas ?>"></td>
                 </tr>
                 <tr>
-                  <td>Password</td>
-                  <td><input class="form-control" type="password" name="password" size="20" required value="<?= $password ?>"></td>
+                  <td>No HP</td>
+                  <td><input class="form-control" type="text" name="nohp" size="20" required value="<?= $nohp ?>"></td>
                 </tr>
                 <tr>
-                  <td></td>
-                  <td><input class="form-control" type="text" name="status" size="20" required value="<?= $status ?>"hidden></td>
+                  <td>Password</td>
+                  <td><input class="form-control" type="password" name="password" size="20" required value="<?= $password ?>"></td>
                 </tr>
                 <tr>
                   <td>

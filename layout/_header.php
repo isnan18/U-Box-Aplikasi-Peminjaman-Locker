@@ -2,18 +2,18 @@
 session_start();
 if (!isset($_SESSION['email'])){
     $msg = "anda tidak berhak akses";
-}else if ($_SESSION['status']!=1){
+}else if ($_SESSION['id_admin']!=111){
     $msg = "anda tidak berhak akses";
     echo $msg;
 }
 
 $email = $_SESSION['email'];
 $conn = mysqli_connect("localhost","root","","webti");
-$query = "SELECT * FROM user WHERE email= '$email' ";
+$query = "SELECT * FROM admin WHERE email= '$email' ";
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
-    $nama = $row['nama'];
+    $email = $row['email'];
 } else {
     // Pengguna tidak ditemukan, lakukan penanganan sesuai kebutuhan
 }
@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) == 1) {
   <ul class="navbar-nav navbar-right">
       <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
         <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-        <div class="d-sm-none d-lg-inline-block">Hi, <?= $nama ?></div>
+        <div class="d-sm-none d-lg-inline-block">Hi, <?= $email ?></div>
       </a>
       <div class="dropdown-menu dropdown-menu-right">
         <a href="../logout.php" class="dropdown-item has-icon text-danger">

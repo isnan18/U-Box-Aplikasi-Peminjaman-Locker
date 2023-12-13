@@ -61,33 +61,12 @@
                                     <input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password"
                                         placeholder="Password">
                                 </div>
-                                <fieldset class="form-group">
-                                    <div class="row" style="margin-left: 5px;">
-                                    <legend class="col-form-label col-sm-2 pt-0" >Status</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="status" id="status" value="2">
-                                        <label class="form-check-label" for="status">
-                                            Mahasiswa
-                                        </label>
-                                        </div>
-                                        <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="status" id="status" value="2">
-                                        <label class="form-check-label" for="status">
-                                            Dosen
-                                        </label>
-                                        </div>
-                                    </div>   
-                                    </div>
-                                </fieldset>
+                                <div class="form-group">
+                                    <input type="number" class="form-control form-control-user" id="exampleInputnohp" name="nohp"
+                                        placeholder="No HP">
+                                </div>
+                            
                                 <button class="btn btn-primary btn-user btn-block" name="submit-usr"> Register Akun</button>
-                                <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
-                                </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
                             </form>
                             <hr>
                             <div class="text-center">

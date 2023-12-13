@@ -2,7 +2,7 @@
 require_once '../layout/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM loker");
+$result = mysqli_query($connection, "SELECT * FROM locker");
 ?>
 
 <section class="section">
@@ -19,6 +19,8 @@ $result = mysqli_query($connection, "SELECT * FROM loker");
                 <tr>
                   <th>Loker</th>
                   <th>Status</th>
+                  <th>Jam Pinjam</th>
+                  <th>ID Peminjam</th>
                   <th style="width: 150">Aksi</th>
                 </tr>
               </thead>
@@ -30,6 +32,8 @@ $result = mysqli_query($connection, "SELECT * FROM loker");
                   <tr>
                     <td><?= $data['no'] ?></td>
                     <td><?= $data['status'] ?></td>
+                    <td><?= $data['jam_pinjam'] ?></td>
+                    <td><?= $data['id_peminjam'] ?></td>
                     <td>
                       <a class="btn btn-sm btn-info" href="editloker.php?id=<?= $data['no'] ?>">
                         <i class="fas fa-edit fa-fw"></i>

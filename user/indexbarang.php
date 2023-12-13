@@ -2,41 +2,39 @@
 require_once '../layoutuser/_top.php';
 require_once '../helper/connection.php';
 
-$result = mysqli_query($connection, "SELECT * FROM penitip WHERE  nama= '$nama' ");
+$result = mysqli_query($connection, "SELECT * FROM penitip WHERE no > '0' AND nim_nidn = '$nim_nidn' ");
 
 ?>
 
 <section class="section">
   <div class="section-header d-flex justify-content-between">
-    <h1>List Barang</h1>
-    <a href="./createbarang.php" class="btn btn-primary">Tambah Data</a>
+    <h1>Data Peminjaman Mandiri</h1>
   </div>
   <div class="row">
     <div class="col-12">
       <div class="card">
         <div class="card-body">
           <div class="table-responsive">
+            <form action="kembalikan.php" method="post">
             <table class="table table-hover table-striped w-100" id="table-1">
               <thead>
                 <tr>
+                  <th>#</th>
+                  <th hidden>ID</th>
                   <th>Nama</th>
-                  <th>Barang</th>
-                  <th>Jumlah</th>
-                  <th>Loker</th>
-                  <th>Status</th>
+                  <th>No Loker</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                 while ($data = mysqli_fetch_array($result)) :
                 ?>
-
                   <tr>
-                    <td><?= $data['nama'] ?></td>
-                    <td><?= $data['barang'] ?></td>
-                    <td><?= $data['jumlah'] ?></td>
-                    <td><?= $data['loker'] ?></td>
-                    <td><?= $data['status'] ?></td>
+                    <td><input class="form-control" type="text" name="id_peminjam" size="20" required hidden value= "<?= $data['id_peminjam'] ?>"></td>   
+                    <td><input class="form-control" type="text" name="nama" size="20" required readonly value= "<?= $data['nama'] ?>"></td>
+                    <td><input class="form-control" type="number" name="no" size="20" required readonly value="<?= $data['no'] ?>"></td>
+                    <td> <input class="btn btn-danger" type="submit" name="kembalikan" value="Kembalikan"></td>
                   </tr>
 
                 <?php
@@ -44,6 +42,7 @@ $result = mysqli_query($connection, "SELECT * FROM penitip WHERE  nama= '$nama' 
                 ?>
               </tbody>
             </table>
+            </form>
           </div>
         </div>
       </div>
